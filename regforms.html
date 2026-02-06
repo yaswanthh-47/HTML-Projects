@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/DAY06(Forms)/form.css" />
+  </head>
+  <body>
+    <h1>COURSE REGISTRATION FORM</h1>
+    <form action="/DAY06(Forms)/response.html">
+      <fieldset>
+        <legend>Personal Details</legend>
+        <table>
+          <tr>
+            <td><label for="fname">First Name</label></td>
+            <td>
+              <input
+                name="fname"
+                type="text"
+                placeholder="Eg: Yaswanth"
+                maxlength="24"
+                required
+              />
+              <p>Enter Your Name</p>
+            </td>
+          </tr>
+          <tr>
+            <td><label for="sname">Surname</label></td>
+            <td>
+              <input type="text" placeholder="Eg: P" optional />
+              <p>Enter Your Surname</p>
+            </td>
+          </tr>
+          <tr>
+            <td><label for="mob">Mobile Number</label></td>
+            <td>
+              <input type="tel" placeholder="Eg: 12345 67890" required />
+              <p>Enter Your 10 digit Mobile Number</p>
+            </td>
+          </tr>
+          <tr>
+            <td><label for="email">Email</label></td>
+            <td>
+              <input type="email" placeholder="abc@gmail.com" required />
+              <p>Enter Your valid Email</p>
+              <img
+                class="invalid"
+                src="/DAY06(Forms)/cross.png"
+                alt="Invaild"
+              />
+              <img class="valid" src="/DAY06(Forms)/checked.png" alt="valid" />
+            </td>
+          </tr>
+          <tr>
+            <td><label for="pass">Password</label></td>
+            <td>
+              <input type="password" placeholder="min 4 characters" required />
+              <p>Enter Your Password</p>
+            </td>
+          </tr>
+          <tr>
+            <td><label for="confpass">Confirm Password</label></td>
+            <td>
+              <input type="password" placeholder="min 4 characters" optional />
+              <p>Confirm Your Password</p>
+            </td>
+          </tr>
+          <tr>
+            <td><label for="dob">DOB</label></td>
+            <td>
+              <input type="date" required />
+              <p>Enter Your DOB</p>
+            </td>
+          </tr>
+          <tr>
+            <td><label for="gender">Gender</label></td>
+            <td>
+              <input name="gender" type="radio" value="Male" />
+              <label>Male</label>
+              <input name="gender" type="radio" value="Female" />
+              <label>Female</label>
+              <input name="gender" type="radio" value="Custom" />
+              <label>Custom</label>
+            </td>
+          </tr>
+          <tr>
+            <td><label for="Country">Select Country</label></td>
+            <td>
+              <select>
+                <option value="">-----Select Country------</option>
+                <option value="INDIA">INDIA</option>
+                <option value="USA">USA</option>
+                <option value="UK">UK</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td><label for="pic">Upload Picture</label></td>
+            <td>
+              <input type="file" multiple />
+              <p>Seclect Your File</p>
+            </td>
+          </tr>
+        </table>
+        <input type="reset" />
+      </fieldset>
+
+      <fieldset>
+        <legend>Course Details</legend>
+        <label for="scouse">Select Course</label><br />
+        <select>
+          <option value="">----Select Course----</option>
+          <option value="pfs">Python Full Stack</option>
+          <option value="jfs">Java Full Stack</option>
+          <option value="ms">MERN Stack</option>
+          <option value="pd">Python for DataScience</option></select
+        ><br />
+        <label for="mode">Delivery Mode</label>
+        <input name="mode" type="radio" value="ONLINE" /><label>ONLINE</label>
+        <input name="mode" type="radio" value="OFFLINE" /><label>OFFLINE</label
+        ><br />
+
+        <label for="comm">Comments</label><br />
+        <textarea
+          style="resize: none"
+          rows="5"
+          cols="35"
+          name="com"
+          id=""
+        ></textarea
+        ><br />
+        <input type="submit" />
+      </fieldset>
+    </form>
+  </body>
+</html>
